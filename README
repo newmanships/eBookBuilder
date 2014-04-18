@@ -1,0 +1,25 @@
+This is a series of scripts I quickly hacked together to avoid doing repetitive steps in Sigil to build picture eBooks for a project.
+
+How it works is by running the scripts 1 step at a time.  It still requires some manual work as you need to sort/choose which pictures you want in what chapter.  Then drag/drop the images you want into the directory with the scripts (based on which chapter the belong to).  Run step1.py as many times as you need (x chapters == x times on step1.py)
+
+As this series of scripts is based heavily on your file/directory structure you must set all your directories to be used in the code (in each python file).  There's a lot of these, but I was moving fast and not planning on releasing this (I don't expect anyone to use this, but I'm trying to build up my GitHub :P).
+
+Someday I'd like to turn this into a GUI when I have more time.
+
+After you have finished step5.py you will need to run the following commands from terminal.
+
+zip -X book.epub mimetype
+
+zip -rg book.epub META-INF -x \*.DS_Store
+
+zip -rg book.epub OEBPS -x \*.DS_Store
+
+
+NOTE: This is all done on OS X so I have no clue if this will even work on another OS.
+The zip instructions were taken from http://ebookconverting.com/zip-up-an-epub-on-a-mac.
+
+Also in case you didn't know an epub is actually a zip.  So if you ever wanted to look at the contents of an epub file simply rename it to a *.zip and unzip it!  Then you could modify it and rezip and rename it.  (Also AFAIK epubs are mostly just written in HTML which makes correcting any errors in an ebook pretty easy to do.
+
+If you find any use out of this drop me a line on Twitter @newmanships
+
+Cheers!
